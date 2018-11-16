@@ -1,0 +1,35 @@
+/* This problem will find the first 50 prime numbers
+ * Then it will place the numbers on 5 lines with
+ * 10 numbers each
+ */
+package examples;
+
+public class PrimeNumberAttempt {
+
+	public static void main(String[] args) {
+		// variables
+		boolean prime;
+		int nmb =1;
+		int test = 2;  // for some reason I have to define this here
+		String output = "";		
+		// main loop to find prime
+		for (int count = 0; count < 10; count++) {
+			test = 1;
+			nmb ++;
+			prime = false;
+			while (true) {
+				if (nmb % test == 0 && test !=nmb)
+					break;
+				else if (test == nmb) {
+					prime = true; break;
+				}
+				test ++;
+				System.out.println("Hello");
+			}
+			if(prime)
+				output += nmb + " ";
+			
+		}
+		System.out.println(output);
+	}
+}
